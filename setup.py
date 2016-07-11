@@ -21,8 +21,7 @@ setup(
     url='http://github.com/global-knowledge/sftp-server',
     license='MIT',
     install_requires=['distribute', 'paramiko'],
-    packages=['distutils', 'distutils.command'],
-    py_modules = ['stuf_sftp'],
+    packages=['src'],
     zip_safe=False,
     entry_points="""\
     [console_scripts]
