@@ -1,0 +1,41 @@
+sftpserver
+==========
+
+``sftpserver`` is a simple single-threaded SFTP server based on
+Paramiko's SFTPServer.
+
+
+Credentials
+-----------
+Username and password are set in JSON data file credentials.json
+
+
+Installation
+------------
+
+Using ``pip``::
+
+    $ pip install git+https://@github.com:global-knowledge/sftp-server
+
+
+Examples
+--------
+
+::
+
+    $ sftpserver
+    Usage: sftpserver [options]
+    -k/--keyfile should be specified
+
+
+    Options:
+      -h, --help            show this help message and exit
+      --host=HOST           listen on HOST [default: localhost]
+      -p PORT, --port=PORT  listen on PORT [default: 3001]
+      -l LEVEL, --level=LEVEL
+                            Debug level: WARNING, INFO, DEBUG [default: INFO]
+      -k FILE, --keyfile=FILE
+                            Path to private key, for example /tmp/test_rsa.key
+
+    $ sftpserver -k /tmp/test_rsa.key -l DEBUG
+

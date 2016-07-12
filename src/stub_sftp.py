@@ -20,6 +20,7 @@
 A stub SFTP server for loopback SFTP testing.
 """
 
+import json
 import os
 from paramiko import (
     ServerInterface, SFTPServerInterface, SFTPServer, SFTPAttributes, SFTPHandle,
@@ -30,8 +31,10 @@ from paramiko import (
 class StubServer (ServerInterface):
     def __init__(self, pub_key_file):
         self.pub_key = RSAKey.from_private_key_file(filename=pub_key_file)
-        self.username = 'learningline'
-        self.password = 'pythonisgreat'
+        with open('credentials.json', 'r') as f:
+            credentials = json.load(f)
+        self.username = credentials['username']
+        self.password = credentials['password']
 
     def check_auth_password(self, username, password):
         if username == self.username and password == self.password:
