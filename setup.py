@@ -1,33 +1,22 @@
-#!/usr/bin/env python
-import os
 from distutils.core import setup
-
-
-classifiers = """\
-Intended Audience :: Developers
-License :: OSI Approved :: MIT License
-Programming Language :: Python
-Topic :: Internet :: File Transfer Protocol (FTP)
-Operating System :: Unix, Linux, Windows, Mac
-"""
-
-def read(*rel_names):
-    return open(os.path.join(os.path.dirname(__file__), *rel_names)).read()
 
 
 setup(
     name='sftp_server',
+    packages=['sftp_server'],
     version='0.3',
-    url='http://github.com/global-knowledge/sftp-server',
-    license='MIT',
-    install_requires=['paramiko'],
-    packages=['src'],
-    zip_safe=False,
-    entry_points="""\
-    [console_scripts]
-    sftp_server = sftp_server:main
-    """,
-    classifiers=filter(None, classifiers.split('\n')),
     description='sftp_server - a simple single-threaded sftp server',
-    long_description=read('README'),
-    )
+    author='Ruslan Spivak',
+    author_email='ruslan.spivak@gmail.com',
+    url='https://github.com/global-knowledge/sftp-server',
+    license='MIT License',
+    zip_safe=False,
+    entry_points={
+        'console_scripts': [
+            'sftp_server = sftp_server:main',
+        ],
+    },
+    keywords=['sftp', 'ssh', 'server'],
+    classifiers=[],
+    install_requires=['paramiko'],
+)
