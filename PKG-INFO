@@ -1,0 +1,54 @@
+Metadata-Version: 1.0
+Name: sftp_server
+Version: 0.3
+Summary: sftp_server - a simple single-threaded sftp server
+Home-page: http://github.com/rspivak/sftpserver
+Author: Ruslan Spivak
+Author-email: ruslan.spivak@gmail.com
+License: MIT
+Description: sftp_server
+        ==========
+        
+        ``sftp_server`` is a simple single-threaded SFTP server based on
+        Paramiko's SFTPServer.
+        
+        I needed a simple server that could be used as a stub for testing
+        Python SFTP clients so I whipped out one.
+        
+        
+        Installation
+        ------------
+        
+        Using ``pip``::
+        
+            $ pip install git+http://git@github.com/global-knowledge/sftp-server.git
+        
+        
+        Examples
+        --------
+        
+        ::
+        
+            $ sftp_server
+            Usage: sftp_server [options]
+            -k/--keyfile should be specified
+        
+        
+            Options:
+              -h, --help            show this help message and exit
+              --host=HOST           listen on HOST [default: localhost]
+              -p PORT, --port=PORT  listen on PORT [default: 3373]
+              -l LEVEL, --level=LEVEL
+                                    Debug level: WARNING, INFO, DEBUG [default: INFO]
+              -k FILE, --keyfile=FILE
+                                    Path to private key, for example /tmp/test_rsa.key
+        
+            $ sftp_server -k test_rsa.key -l DEBUG
+        
+
+Platform: Linux, Mac, Windows
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: File Transfer Protocol (FTP)
+Classifier: Operating System :: Unix

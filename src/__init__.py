@@ -14,7 +14,7 @@
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -29,9 +29,7 @@ import socket
 import optparse
 import sys
 import textwrap
-
 import paramiko
-
 from sftpserver.stub_sftp import StubServer, StubSFTPServer
 
 HOST, PORT = 'localhost', 3001
@@ -66,7 +64,7 @@ def start_server(host, port, keyfile, level):
 
 def main():
     usage = """\
-    usage: sftpserver [options]
+    usage: sftp_server [options]
     -k/--keyfile should be specified
     """
     parser = optparse.OptionParser(usage=textwrap.dedent(usage))

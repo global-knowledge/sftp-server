@@ -15,7 +15,10 @@ Installation
 
 Using ``pip``::
 
-    $ pip install git+https://@github.com:global-knowledge/sftp-server
+    $ pip install --upgrade pip
+    $ pip install --upgrade setuptools
+    $ pip install -r requirements.txt
+    $ pip install -e git+http://git@github.com/global-knowledge/sftp-server.git
 
 
 Examples
@@ -23,8 +26,8 @@ Examples
 
 ::
 
-    $ sftpserver
-    Usage: sftpserver [options]
+    $ sftp_server
+    Usage: sftp_server [options]
     -k/--keyfile should be specified
 
 
@@ -37,5 +40,5 @@ Examples
       -k FILE, --keyfile=FILE
                             Path to private key, for example /tmp/test_rsa.key
 
-    $ sftpserver -k /tmp/test_rsa.key -l DEBUG
+    $ sftp_server -k test_rsa.key -l DEBUG
 

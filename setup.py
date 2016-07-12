@@ -20,7 +20,7 @@ setup(
     version='0.3',
     url='http://github.com/global-knowledge/sftp-server',
     license='MIT',
-    install_requires=['distribute', 'paramiko'],
+    install_requires=['paramiko'],
     packages=['src'],
     zip_safe=False,
     entry_points="""\
