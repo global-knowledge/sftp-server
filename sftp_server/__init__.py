@@ -81,7 +81,7 @@ def main():
         )
     parser.add_option(
         '-k', '--keyfile', dest='keyfile', metavar='FILE',
-        help='Path to private key, for example /tmp/test_rsa.key'
+        help='Path to private key, for example test_rsa.key'
         )
 
     options, args = parser.parse_args()
