@@ -30,7 +30,7 @@ import optparse
 import sys
 import textwrap
 import paramiko
-from sftpserver.stub_sftp import StubServer, StubSFTPServer
+from stub_sftp import StubServer, StubSFTPServer
 
 HOST, PORT = 'localhost', 3001
 BACKLOG = 10

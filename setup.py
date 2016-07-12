@@ -16,7 +16,7 @@ def read(*rel_names):
 
 
 setup(
-    name='sftpserver',
+    name='sftp_server',
     version='0.3',
     url='http://github.com/global-knowledge/sftp-server',
     license='MIT',
@@ -25,9 +25,9 @@ setup(
     zip_safe=False,
     entry_points="""\
     [console_scripts]
-    sftpserver = sftpserver:main
+    sftp_server = sftp_server:main
     """,
     classifiers=filter(None, classifiers.split('\n')),
-    description='sftp-server - a simple single-threaded sftp server',
+    description='sftp_server - a simple single-threaded sftp server',
     long_description=read('README'),
     )
