@@ -90,7 +90,10 @@ def main():
         parser.print_help()
         sys.exit(-1)
 
-    start_server(options.host, options.port, options.keyfile, options.level)
+    try:
+        start_server(options.host, options.port, options.keyfile, options.level)
+    except KeyboardInterrupt as e:
+        print('\n{}'.format('SFTP Server halted'))
 
 
 if __name__ == '__main__':
