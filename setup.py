@@ -19,4 +19,7 @@ setup(
     keywords=['sftp', 'ssh', 'server'],
     classifiers=[],
     install_requires=['paramiko'],
+    data_files=[
+        ('', 'credentials.json'),
+    ],
 )
