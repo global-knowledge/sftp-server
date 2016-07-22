@@ -20,6 +20,6 @@ setup(
     classifiers=[],
     install_requires=['paramiko'],
     data_files=[
-        ('', 'credentials.json'),
+        ('', ['credentials.json']),
     ],
 )
