@@ -4,6 +4,9 @@ from distutils.core import setup
 setup(
     name='sftp_server',
     packages=['sftp_server'],
+    package_data={
+        'sftp_server': ['credentials.json'],
+    },
     version='0.3',
     description='sftp_server - a simple single-threaded sftp server',
     author='Ruslan Spivak',
@@ -19,7 +22,4 @@ setup(
     keywords=['sftp', 'ssh', 'server'],
     classifiers=[],
     install_requires=['paramiko'],
-    data_files=[
-        ('', ['credentials.json']),
-    ],
 )
